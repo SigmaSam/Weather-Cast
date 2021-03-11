@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+
+.btn {
+    background-color: red;
+}
+
+@tailwind utilities;
