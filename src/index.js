@@ -3,6 +3,7 @@ const tempVal = document.getElementById('value');
 const condition = document.getElementById('condition')
 const city = document.getElementById('city');
 
+
 const unitSwap = (val) => ((val * 9) / 5 + 32).toFixed(1);
 
 
@@ -13,9 +14,18 @@ const getWeather = async (place) => {
                 const clima = weatherInfo.weather[0].main;
                 const temp = (weatherInfo.main.temp - 273.15).toFixed(1);
 
-                value.textContent = `${temp}`;
+                tempVal.textContent = `${temp}` + '°C';
                 city.innerHTML = place;
                 condition.textContent = clima;
+
+                const toggle = document.getElementById('switch')
+
+                toggle.addEventListener('input', async (e) => {
+                        e.preventDefault();
+                        toggle.checked === true ? tempVal.textContent = `${unitSwap(temp)}` + '°F' : tempVal.textContent = `${temp}` + '°C';
+                })
+
+
 
         } catch (error) {
                 console.log(error);
@@ -25,18 +35,11 @@ const getWeather = async (place) => {
 
 const form = document.getElementById('locForm');
 
-form.addEventListener('click', (e) => {
+form.addEventListener('click', async (e) => {
         e.preventDefault();
         const cityName = form[0].value;
         getWeather(cityName);
         
 }) 
 
-const toggle = document.getElementById('switch')
 
-toggle.addEventListener('click', (e) => {
-        e.preventDefault
-        if (toggle.value) {
-                unitSwap(tempVal);
-        }
-})
