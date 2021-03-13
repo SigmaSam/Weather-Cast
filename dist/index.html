@@ -10,33 +10,35 @@
     <link href="./styles/tailwind.css" rel="stylesheet">
     <link href="./styles/styles.css" rel="stylesheet">
 </head>
-<body class="h-screen bg-blue-300 ">
+<body class="h-screen">
     <header class="header flex justify-center font-bold">
-        <h1>Weather Cast</h1>
-        <p></p>
+        <h1 id="title">Weather Cast</h1>
     </header>
-    <main class="flex flex-col justify-around content-around">
-        <section class="flex flex-col items-center justify-around font-mono font-bold ">
+    <main class="flex flex-col justify-around">
+        <section class="flex flex-col items-center text-center mx-auto font-mono font-bold mt-4 bg-white border rounded w-1/3 shadow-lg p-2">
             <form class="flex flex-col" id="locForm">
                 <label for="location">
                     Lets Chek a Place in the World.
                 </label>
-                <input class="border border-2 rounded" type="text" id="location" name="location">
+                <input class="border border-2 rounded text-center" type="text" id="location" name="location">
                 <button class=" bg-blue-700" type="button">Search</button>
             </form>
-            <p>Celcius or Fahrenheit?</p>
-            <label class="switch">  
+            <p class="mt-4">Celcius or Fahrenheit?</p>
+            <label class="switch mt-2">  
                 <input id="switch" type="checkbox" value='false'>
                 <span class="slider round"></span>
             </label>
         </section>
-        <section class="flex flex-row justify-around text-center font-mono m-0">
-            <div class="flex flex-col rounded bg-white border" id="card">
-                <h1 id="value">20</h1>
+        <section  class="flex flex-row justify-center text-center font-mono mt-5 max-h-60">
+            <div class="flex flex-col rounded bg-white border justify-center p-1 mx-2 shadow-lg" id="card">
+                <h1 id="value">Find</h1>
                 <p id="condition"></p>
-                <p id="city">Somewhere, Else</p>
+                <p id="city">Your city up there</p>
             </div>
-
+            <div class="flex flex-col rounded bg-white border hidden w-1/2 p-2 shadow-lg" id="cardWiki">
+                <h1 id="cityName" class="font-bold "></h1>                
+                <p id="snippet"></p>
+            </div>
 
             
         </section>

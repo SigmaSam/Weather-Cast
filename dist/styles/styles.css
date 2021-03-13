@@ -4,6 +4,14 @@
 
 
 
+body {
+	background: linear-gradient(68deg, #0d83c2 0.9em, rgba(255, 255, 255, 0) 0.99em) 3em -3em, linear-gradient(-68deg, #0d83c2 0.9em, rgba(255, 255, 255, 0) 0.99em) -3em -3em, radial-gradient(circle, #0d83c2 0.9em, rgba(255, 255, 255, 0) 0.99em) 0 0, linear-gradient(68deg, #F0F0F0 0.9em, rgba(255, 255, 255, 0) 0.99em) 0 0, linear-gradient(-68deg, #F0F0F0 0.9em, rgba(255, 255, 255, 0) 0.99em) 0 0, radial-gradient(circle, #F0F0F0 0.9em, rgba(255, 255, 255, 0) 0.99em) 3em 3em;
+	background-size: 6em 6em;
+	background-color: #82BFE0;
+	background-repeat: repeat;
+	font: 14px/2 "Trebuchet MS", Verdana, sans-serif;
+}
+
 .header {
     font-family: 'DotGothic16', sans-serif;
     font-size: 6rem;
@@ -40,7 +48,7 @@
 			transparent 0.351em,
 			transparent 3em);
 	background-size: 2em 1.21em;
-	background-position: -0.3em -0.2em;
+	background-position: -0.3em 1.9em;
 }
 .header::after {
 	background-image:
@@ -131,6 +139,7 @@
     border-radius: 50%;
   }
 
-
-
+  #title {
+	-webkit-text-stroke: 1px white;
+  }
 @tailwind utilities;
