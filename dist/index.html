@@ -10,8 +10,34 @@
     <link href="./styles/tailwind.css" rel="stylesheet">
     <link href="./styles/styles.css" rel="stylesheet">
 </head>
-<body>
-    <h1 class="bg-yellow-900 w-100">testwind</h1>
-    <button class="btn">TestButton</button>
+<body class="h-screen bg-blue-300 ">
+    <header class="header flex justify-center font-bold">
+        <h1>Weather Cast</h1>
+        <p></p>
+    </header>
+    <main class="flex flex-col justify-around content-around">
+        <section class="flex flex-col items-center justify-around font-mono font-bold ">
+            <form class="flex flex-col" id="locForm">
+                <label for="location">
+                    Lets Chek a Place in the World.
+                </label>
+                <input class="border border-2 rounded" type="text" id="location" name="location">
+                <button class=" bg-blue-700" type="button">Search</button>
+            </form>
+            <p>Celcius or Fahrenheit?</p>
+            <label class="switch">  
+                <input id="switch" type="checkbox" value='false'>
+                <span class="slider round"></span>
+            </label>
+        </section>
+        <section class="flex flex-row justify-around text-center font-mono m-0">
+            <div class="flex flex-col rounded bg-white border" id="card">
+                <h1 id="value">20</h1>
+                <p id="condition"></p>
+                <p id="city">Somewhere, Else</p>
+            </div>
+        </section>
+        <script src="main.js"></script>
+    </main>
 </body>
 </html>
