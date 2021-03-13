@@ -1,6 +1,6 @@
 # Weather-Cast
 
-A simple page to check the Weather in any city.
+A simple page to check the Weather in any city, that also gives you the description from a Wikipedia article of the place.
 
 
 ## Built With
@@ -12,9 +12,9 @@ A simple page to check the Weather in any city.
 
 ## Live Demo
 
-![Tracker]()
+![Tracker](./assets/weathersnap.png)
 
-![Live Version]()
+![Live Version](https://raw.githack.com/SigmaSam/Weather-Cast/features/dist/index.html)
 
 ## Getting Started
 
