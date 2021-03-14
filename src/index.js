@@ -1,3 +1,5 @@
+ 
+const icon = document.getElementById('icon');
 const tempVal = document.getElementById('value');
 const condition = document.getElementById('condition');
 const city = document.getElementById('city');
@@ -8,6 +10,27 @@ const toggle = document.getElementById('switch');
 
 const unitSwap = (val) => ((val * 9) / 5 + 32).toFixed(1);
 
+const backColor = async (arg) => {
+  if (arg === 'Clouds') {
+    document.body.style.backgroundColor = '#D0D5D9'
+    icon.className = 'fas fa-cloud fa-2x  mx-2';
+  } else if (arg === 'Clear') {
+    document.body.style.backgroundColor = '#6EFDFD'
+    icon.className = 'far fa-sun fa-2x mx-2';
+  } else if (arg === 'Rain') {
+    document.body.style.backgroundColor = '#0080FF'
+    icon.className = 'fas fa-cloud-showers-heavy fa-2x mx-2';
+  }
+  else if (arg === 'Snow') {
+    document.body.style.backgroundColor = '#FFFFFF'
+    icon.className = 'fas fa-snowflake fa-2x mx-2';
+  }
+  else if (arg === 'Thunderstorm') {
+    document.body.style.backgroundColor = '#FFA500'
+    icon.className = 'fas fa-bolt fa-2x mx-2';
+  }
+}
+
 const getWeather = async (place) => {
   try {
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${place}&APPID=17bb7e6ff8637be739a2a23e2ccf12e9`, { mode: 'cors' });
@@ -15,11 +38,14 @@ const getWeather = async (place) => {
     const clima = weatherInfo.weather[0].main;
     const temp = (weatherInfo.main.temp - 273.15).toFixed(1);
 
+    backColor(clima);
     toggle.checked === true ? tempVal.textContent = `${unitSwap(temp)}` + '°F' : tempVal.textContent = `${temp}` + '°C';
     tempVal.className = 'text-5xl font-bold font-mono';
     city.innerHTML = place;
     condition.textContent = clima;
     condition.className = 'italic';
+
+       
 
     toggle.addEventListener('input', async (e) => {
       e.preventDefault();
@@ -30,6 +56,12 @@ const getWeather = async (place) => {
     city.textContent = 'City not Found';
   }
 };
+
+
+
+
+
+
 
 const getWiki = async (place) => {
   try {

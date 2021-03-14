@@ -3,83 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap'); 
 
 
-
-body {
-	background: linear-gradient(68deg, #0d83c2 0.9em, rgba(255, 255, 255, 0) 0.99em) 3em -3em, linear-gradient(-68deg, #0d83c2 0.9em, rgba(255, 255, 255, 0) 0.99em) -3em -3em, radial-gradient(circle, #0d83c2 0.9em, rgba(255, 255, 255, 0) 0.99em) 0 0, linear-gradient(68deg, #F0F0F0 0.9em, rgba(255, 255, 255, 0) 0.99em) 0 0, linear-gradient(-68deg, #F0F0F0 0.9em, rgba(255, 255, 255, 0) 0.99em) 0 0, radial-gradient(circle, #F0F0F0 0.9em, rgba(255, 255, 255, 0) 0.99em) 3em 3em;
-	background-size: 6em 6em;
-	background-color: #82BFE0;
-	background-repeat: repeat;
-	font: 14px/2 "Trebuchet MS", Verdana, sans-serif;
-}
-
-.header {
-    font-family: 'DotGothic16', sans-serif;
-    font-size: 6rem;
-	background-color: #82BFE0;
-	background-image:
-		repeating-radial-gradient(
-			circle at 0.77em 0.87em,
-			hsl(0, 0%, 100%),
-			#FFFFFF 0.12em,
-			transparent 0.121em,
-			transparent 3em),
-		repeating-radial-gradient(
-			circle at 0.94em 1.05em,
-			#FFFFFF,
-			#FFFFFF 0.16em,
-			transparent 0.161em,
-			transparent 3em),
-		repeating-radial-gradient(
-			circle at 0.24em 1.05em,
-			#FFFFFF,
-			#FFFFFF 0.16em,
-			transparent 0.161em,
-			transparent 3em),
-		repeating-radial-gradient(
-			circle at 0.5em 0.92em,
-			#FFFFFF,
-			#FFFFFF 0.26em,
-			transparent 0.261em,
-			transparent 3em),
-		repeating-radial-gradient(
-			circle at 0.58em 1.1em,
-			#FFFFFF,
-			#FFFFFF 0.35em,
-			transparent 0.351em,
-			transparent 3em);
-	background-size: 2em 1.21em;
-	background-position: -0.3em 1.9em;
-}
-.header::after {
-	background-image:
-		repeating-radial-gradient(
-			circle at 0.74em 1.08em,
-			#FFFFFF,
-			#FFFFFF 0.13em,
-			transparent 0.131em,
-			transparent 3em),
-		repeating-radial-gradient(
-			circle at 0.22em 1.05em,
-			#FFFFFF,
-			#FFFFFF 0.16em,
-			transparent 0.161em,
-			transparent 3em),
-		repeating-radial-gradient(
-			circle at 0.45em 1.02em,
-			#FFFFFF,
-			#FFFFFF 0.28em,
-			transparent 0.281em,
-			transparent 3em),
-		repeating-radial-gradient(
-			circle at 0.45em 1.2em,
-			#FFFFFF,
-			#FFFFFF 0.28em,
-			transparent 0.281em,
-			transparent 3em);
-	background-size: 2em 1.21em;
-	background-position: -1.2em 0.4em;
-}
-
 .switch {
   position: relative;
   display: inline-block;
@@ -140,6 +63,8 @@ body {
   }
 
   #title {
+	font-family: 'DotGothic16', sans-serif;
+    font-size: 6rem;
 	-webkit-text-stroke: 1px white;
   }
 @tailwind utilities;
