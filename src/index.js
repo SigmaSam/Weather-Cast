@@ -1,4 +1,3 @@
- 
 const icon = document.getElementById('icon');
 const tempVal = document.getElementById('value');
 const condition = document.getElementById('condition');
@@ -12,24 +11,22 @@ const unitSwap = (val) => ((val * 9) / 5 + 32).toFixed(1);
 
 const backColor = async (arg) => {
   if (arg === 'Clouds') {
-    document.body.style.backgroundColor = '#D0D5D9'
+    document.body.style.backgroundColor = '#D0D5D9';
     icon.className = 'fas fa-cloud fa-2x  mx-2';
   } else if (arg === 'Clear') {
-    document.body.style.backgroundColor = '#6EFDFD'
+    document.body.style.backgroundColor = '#6EFDFD';
     icon.className = 'far fa-sun fa-2x mx-2';
   } else if (arg === 'Rain') {
-    document.body.style.backgroundColor = '#0080FF'
+    document.body.style.backgroundColor = '#0080FF';
     icon.className = 'fas fa-cloud-showers-heavy fa-2x mx-2';
-  }
-  else if (arg === 'Snow') {
-    document.body.style.backgroundColor = '#FFFFFF'
+  } else if (arg === 'Snow') {
+    document.body.style.backgroundColor = '#FFFFFF';
     icon.className = 'fas fa-snowflake fa-2x mx-2';
-  }
-  else if (arg === 'Thunderstorm') {
-    document.body.style.backgroundColor = '#FFA500'
+  } else if (arg === 'Thunderstorm') {
+    document.body.style.backgroundColor = '#FFA500';
     icon.className = 'fas fa-bolt fa-2x mx-2';
   }
-}
+};
 
 const getWeather = async (place) => {
   try {
@@ -45,7 +42,6 @@ const getWeather = async (place) => {
     condition.textContent = clima;
     condition.className = 'italic';
 
-       
 
     toggle.addEventListener('input', async (e) => {
       e.preventDefault();
@@ -56,12 +52,6 @@ const getWeather = async (place) => {
     city.textContent = 'City not Found';
   }
 };
-
-
-
-
-
-
 
 const getWiki = async (place) => {
   try {
