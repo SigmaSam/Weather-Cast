@@ -14,7 +14,7 @@ A simple page to check the Weather in any city, that also gives you the descript
 
 ![Tracker](./assets/weathersnap.png)
 
-[Live Version](https://raw.githack.com/SigmaSam/Weather-Cast/features/dist/index.html)
+[Live Version](https://github.com/SigmaSam/Weather-Cast/blob/main/dist/index.html)
 
 ## Getting Started
 
